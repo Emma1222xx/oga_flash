@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class VIPPredictions extends StatelessWidget {
@@ -12,3 +11,4 @@ class VIPPredictions extends StatelessWidget {
     );
   }
 }
+

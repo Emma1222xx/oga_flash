@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'free_predictions.dart';
 import 'vip_predictions.dart';
