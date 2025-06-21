@@ -1,0 +1,1 @@
+This is the windows folder for platform-specific files.

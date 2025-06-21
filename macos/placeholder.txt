@@ -1,0 +1,1 @@
+This is the macos folder for platform-specific files.

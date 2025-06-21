@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(OgaFlashApp());
@@ -10,7 +11,9 @@ class OgaFlashApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Oga Flash',
-      theme: ThemeData(primarySwatch: Colors.green),
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
       home: SplashScreen(),
     );
   }
@@ -26,38 +29,26 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => HomePage()),
-      );
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (context) => HomePage(),
+      ));
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green.shade100,
+      backgroundColor: Colors.green,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircularProgressIndicator(),
-            SizedBox(height: 20),
-            Text("Powered by Asipita",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Text('Oga Flash', style: TextStyle(fontSize: 30, color: Colors.white)),
+            SizedBox(height: 10),
+            Text('Powered by Asipita', style: TextStyle(color: Colors.white70)),
           ],
         ),
       ),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Oga Flash")),
-      body: Center(child: Text("Welcome to Oga Flash!")),
     );
   }
 }
